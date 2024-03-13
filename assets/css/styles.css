@@ -1,0 +1,366 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100dvh;
+}
+
+#video-background {
+    width: 100%;
+    height: 100%;
+    filter: blur(5px); /* Ajustar el valor de '5px' según la cantidad de desenfoque */
+    object-fit: cover;
+    pointer-events: none;
+    user-select: none;
+}
+
+.video-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
+}
+
+div h1 {
+  font-size: 2.5em;
+  font-family: Manrope;
+  text-shadow: 0px 0px 20px rgb(0 0 0 / 100%);
+}
+
+div nav {
+  margin-top: 20px;
+}
+
+div nav a {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-family: Quicksand;
+  text-decoration: none; /* Quita el subrayado predeterminado */
+  position: relative;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo del subrayado */
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #fff; /* Cambia el color del subrayado según tu preferencia */
+    bottom: -5px; /* Ajusta la distancia del subrayado desde el texto */
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+/* Animación del subrayado al pasar el mouse */
+nav a:hover::after {
+    transform: scaleX(1);
+}
+
+section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+section:nth-child(odd) {
+  background-color: #222;
+}
+
+section h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content img {
+  max-width: 100%;
+  height: auto;
+  border: 5px solid #fff;
+  margin-bottom: 15px;
+}
+
+.contact {
+  background-color: #ec00ff0a;
+  color: #fff;
+  padding: 30px;
+  text-align: center;
+}
+
+/*=============== seccion 1 ===============*/
+
+.flex_container {
+  width: 70%;
+  display: flex;
+  gap: 20px;
+  z-index: 2;
+}
+
+.card {
+  border-radius: 10px;
+  min-height: 200px;
+  font-weight: bold;
+  font-family: Manrope;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
+  width: calc(33.33% - 20px);
+
+  box-shadow: 0px 0px 10px 5px rgb(24 4 21);
+  background-color: #0c0c0c;
+}
+
+.card-text {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  max-height: 200px;
+}
+
+.flex__img {
+  max-width: 100%;
+  height: 100px;
+}
+
+
+/*=============== seccion 2 ===============*/
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card__container {
+  padding-block: 80px;
+}
+
+.card__article--wrapper{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.card__content {
+  margin-inline: 28px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.card__article {
+  border-radius: 20px;
+  overflow: hidden;
+  height: 330px !important;
+  background-color: #230f3336;
+  padding: 24px 0px;
+}
+
+.card__image {
+  position: relative;
+  background-color: #00000000;
+  width: 100%;
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+.card__data {
+  padding: 24px 0px;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.card__img {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 5;
+  object-fit: contain;
+}
+
+.card__shadow {
+  width: 200px;
+  height: 200px;
+  background-color: #492f8982;
+  border-radius: 50%;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  filter: blur(110px);
+}
+
+.card__name {
+  font-size: 20px;
+  color: #FFFFFF;
+  margin: 0 auto 12px;
+  max-width: 85%;
+}
+
+.card__description {
+  font-weight: 500;
+  max-width: 85%;
+  margin: 0 auto 28px;
+  text-align: center;
+  font-family: Quicksand;
+}
+
+.fecha {
+  display: inline-block;
+  background-color: hidden;
+  padding: 12px 24px;
+  border-radius: 4px;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+/*=============== seccion 3 ===============*/
+
+.grid__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 25px;
+  width: 80%; /* Ajusta el ancho del contenedor */
+  margin: auto; /* Centra el contenedor en la página */
+  z-index: 2;
+}
+
+.grid__top,
+.grid__bottom {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px; /* Ajusta el espaciado entre elementos */
+}
+
+.grid__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 13px 7px rgba(70, 70, 70, 0.50);
+  height: 185px; /* Ajusta la altura de la tarjeta según sea necesario */
+  padding: 20px; /* Añade relleno para evitar que el contenido se vea demasiado apretado */
+  /* Animación de respiración en la sombra */
+  animation: shadow-pulse 1.5s infinite alternate;
+}
+
+.grid__img {
+  max-width: 100%;
+  height: 100px; /* Ajusta la altura de la imagen según sea necesario */
+  object-fit: cover; /* Ajusta la imagen para que se ajuste al tamaño del contenedor */
+}
+
+@keyframes shadow-pulse {
+  0% {
+    box-shadow: 0px 0px 10px 5px rgb(255 0 137 / 11%);
+  }
+  100% {
+    box-shadow: 0px 0px 7px 3px rgb(134 74 139 / 13%);
+  }
+}
+
+
+.grid__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 25px;
+    width: 80%;
+    margin: auto;
+}
+
+.grid__top,
+.grid__bottom {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.grid__card {
+    position: relative;
+    perspective: 1000px; /* Agrega perspectiva para el efecto 3D */
+    height: 185px;
+    background-color: #0b0b0b9e
+}
+
+.card__inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+
+.grid__card:hover .card__inner {
+    transform: rotateY(180deg);
+}
+
+.card__front,
+.card__back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.card__back {
+    transform: rotateY(180deg);
+}
+
+/*---------------------- particle .-------------- */
+
+#particles-js {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    z-index: 1;
+}
+
+.particlediv {
+  position: relative;
+}
+
